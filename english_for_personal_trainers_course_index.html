@@ -1,0 +1,691 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>English for Personal Trainers | Master Course Index</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts: Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- FontAwesome for Academic Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        academic: {
+                            bg: '#f8f9fa',
+                            header: '#2c3e50',
+                            text: '#2b2d42',
+                            card: '#ffffff',
+                            border: '#e2e8f0',
+                            accent: '#1d4ed8',
+                            review: '#fffbeb',
+                            reviewBorder: '#fde68a',
+                            reviewText: '#b45309'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            background-color: #f8f9fa;
+            color: #2b2d42;
+        }
+    </style>
+</head>
+<body class="font-sans antialiased min-h-screen flex flex-col selection:bg-blue-200">
+
+    <!-- Top Academic Banner / Header -->
+    <header class="bg-[#2c3e50] text-white shadow-md border-b border-slate-700">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 md:py-12 flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
+            <div>
+                <div class="flex items-center gap-2 text-blue-400 text-sm font-semibold uppercase tracking-wider mb-2">
+                    <i class="fa-solid fa-graduation-cap"></i> Professional E-Coursebook
+                </div>
+                <h1 class="text-3xl sm:text-4xl font-bold tracking-tight text-white">English for Personal Trainers</h1>
+                <p class="mt-2 text-slate-300 text-sm sm:text-base max-w-2xl">
+                    Comprehensive English curriculum covering human anatomy, sport nutrition, advanced exercise technique, pathology, and emergency first aid by Tetiana Kolisnichenko.
+                </p>
+            </div>
+            <div class="flex flex-col sm:flex-row gap-3 self-stretch md:self-auto">
+                <a href="#syllabus" 
+                   class="inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-xl bg-blue-600 hover:bg-blue-500 text-white text-sm font-medium transition shadow-sm">
+                    <i class="fa-solid fa-book-open"></i> Browse Syllabus
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content Container -->
+    <main class="flex-grow max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8 py-10">
+
+        <!-- Course Statistics / Quick Info Bar -->
+        <section class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-10">
+            <div class="bg-white rounded-2xl p-5 border border-[#e2e8f0] shadow-sm flex items-center gap-4">
+                <div class="w-12 h-12 rounded-xl bg-blue-50 text-blue-600 flex items-center justify-center text-xl font-bold">
+                    <i class="fa-solid fa-calendar-days"></i>
+                </div>
+                <div>
+                    <div class="text-2xl font-bold text-[#2c3e50]">26</div>
+                    <div class="text-xs text-slate-500 uppercase font-semibold">Total Units</div>
+                </div>
+            </div>
+            <div class="bg-white rounded-2xl p-5 border border-[#e2e8f0] shadow-sm flex items-center gap-4">
+                <div class="w-12 h-12 rounded-xl bg-emerald-50 text-emerald-600 flex items-center justify-center text-xl font-bold">
+                    <i class="fa-solid fa-layer-group"></i>
+                </div>
+                <div>
+                    <div class="text-2xl font-bold text-[#2c3e50]">4</div>
+                    <div class="text-xs text-slate-500 uppercase font-semibold">Core Modules</div>
+                </div>
+            </div>
+            <div class="bg-white rounded-2xl p-5 border border-[#e2e8f0] shadow-sm flex items-center gap-4">
+                <div class="w-12 h-12 rounded-xl bg-amber-50 text-amber-600 flex items-center justify-center text-xl font-bold">
+                    <i class="fa-solid fa-award"></i>
+                </div>
+                <div>
+                    <div class="text-2xl font-bold text-[#2c3e50]">4</div>
+                    <div class="text-xs text-slate-500 uppercase font-semibold">Cumulative Reviews</div>
+                </div>
+            </div>
+            <div class="bg-white rounded-2xl p-5 border border-[#e2e8f0] shadow-sm flex items-center gap-4">
+                <div class="w-12 h-12 rounded-xl bg-purple-50 text-purple-600 flex items-center justify-center text-xl font-bold">
+                    <i class="fa-solid fa-laptop-code"></i>
+                </div>
+                <div>
+                    <div class="text-2xl font-bold text-[#2c3e50]">Interactive</div>
+                    <div class="text-xs text-slate-500 uppercase font-semibold">Tasks & Quizzes</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Search & Filter Bar -->
+        <div class="mb-8 flex flex-col sm:flex-row items-center justify-between gap-4 bg-white p-4 rounded-2xl border border-[#e2e8f0] shadow-sm">
+            <div class="relative w-full sm:w-96">
+                <span class="absolute inset-y-0 left-0 flex items-center pl-3 text-slate-400">
+                    <i class="fa-solid fa-search"></i>
+                </span>
+                <input type="text" id="searchInput" placeholder="Search units or topics..." 
+                       class="w-full pl-10 pr-4 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-sm text-[#2b2d42] focus:outline-none focus:ring-2 focus:ring-blue-500 focus:bg-white transition"
+                       onkeyup="filterUnits()">
+            </div>
+            <div class="flex items-center gap-2 w-full sm:w-auto justify-end">
+                <span class="text-xs font-medium text-slate-500">Filter by Module:</span>
+                <select id="moduleFilter" onchange="filterUnits()" class="bg-slate-50 border border-slate-200 rounded-xl px-3 py-2 text-sm text-[#2b2d42] focus:outline-none focus:ring-2 focus:ring-blue-500">
+                    <option value="all">All Modules</option>
+                    <option value="mod-1">Module I: Anatomy & Physiology</option>
+                    <option value="mod-2">Module II: Nutrition & Dietetics</option>
+                    <option value="mod-3">Module III: Exercise Science & Technique</option>
+                    <option value="mod-4">Module IV: Health, Fitness & First Aid</option>
+                </select>
+            </div>
+        </div>
+
+        <!-- Syllabus Container -->
+        <div id="syllabus" class="space-y-10">
+
+            <!-- MODULE I: Human Anatomy & Physiology -->
+            <div class="module-section" data-module="mod-1">
+                <div class="flex items-center gap-3 mb-4">
+                    <span class="px-3 py-1 bg-[#2c3e50] text-white text-xs font-bold rounded-lg tracking-wide uppercase">Module I</span>
+                    <h2 class="text-xl sm:text-2xl font-bold text-[#2c3e50]">Human Anatomy & Physiology (Units 1–6)</h2>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                    
+                    <!-- Unit 1 -->
+                    <div class="unit-card bg-white rounded-2xl p-5 border border-[#e2e8f0] shadow-sm hover:shadow-md transition flex flex-col justify-between" data-title="human anatomy overview body systems organs">
+                        <div>
+                            <div class="mb-3">
+                                <span class="w-8 h-8 rounded-lg bg-slate-100 font-bold text-[#2c3e50] flex items-center justify-center text-sm">01</span>
+                            </div>
+                            <h3 class="font-bold text-[#2b2d42] text-base mb-2">Human Anatomy Overview — Body Systems & Organs</h3>
+                            <p class="text-slate-500 text-xs line-clamp-2">Introduction to human body architecture, major physiological systems, and anatomical terminology.</p>
+                        </div>
+                        <div class="mt-5 pt-3 border-t border-slate-100 flex items-center justify-between">
+                            <span class="text-xs text-slate-400"><i class="fa-regular fa-clock mr-1"></i> 45 min read</span>
+                            <a href="unit-01.html" class="inline-flex items-center gap-1.5 text-xs font-semibold text-blue-600 hover:text-blue-800">
+                                Open Unit <i class="fa-solid fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Unit 2 -->
+                    <div class="unit-card bg-white rounded-2xl p-5 border border-[#e2e8f0] shadow-sm hover:shadow-md transition flex flex-col justify-between" data-title="the musculoskeletal system structure function">
+                        <div>
+                            <div class="mb-3">
+                                <span class="w-8 h-8 rounded-lg bg-slate-100 font-bold text-[#2c3e50] flex items-center justify-center text-sm">02</span>
+                            </div>
+                            <h3 class="font-bold text-[#2b2d42] text-base mb-2">The Musculoskeletal System — Structure & Function</h3>
+                            <p class="text-slate-500 text-xs line-clamp-2">Bones, skeletal divisions, axial vs appendicular skeleton, and levers in human movement.</p>
+                        </div>
+                        <div class="mt-5 pt-3 border-t border-slate-100 flex items-center justify-between">
+                            <span class="text-xs text-slate-400"><i class="fa-regular fa-clock mr-1"></i> 50 min read</span>
+                            <a href="unit-02.html" class="inline-flex items-center gap-1.5 text-xs font-semibold text-blue-600 hover:text-blue-800">
+                                Open Unit <i class="fa-solid fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Unit 3 -->
+                    <div class="unit-card bg-white rounded-2xl p-5 border border-[#e2e8f0] shadow-sm hover:shadow-md transition flex flex-col justify-between" data-title="muscles deep muscles">
+                        <div>
+                            <div class="mb-3">
+                                <span class="w-8 h-8 rounded-lg bg-slate-100 font-bold text-[#2c3e50] flex items-center justify-center text-sm">03</span>
+                            </div>
+                            <h3 class="font-bold text-[#2b2d42] text-base mb-2">Muscles & Deep Muscles</h3>
+                            <p class="text-slate-500 text-xs line-clamp-2">Superficial and deep skeletal musculature, muscle fiber types, and contraction mechanisms.</p>
+                        </div>
+                        <div class="mt-5 pt-3 border-t border-slate-100 flex items-center justify-between">
+                            <span class="text-xs text-slate-400"><i class="fa-regular fa-clock mr-1"></i> 45 min read</span>
+                            <a href="unit-03.html" class="inline-flex items-center gap-1.5 text-xs font-semibold text-blue-600 hover:text-blue-800">
+                                Open Unit <i class="fa-solid fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Unit 4 -->
+                    <div class="unit-card bg-white rounded-2xl p-5 border border-[#e2e8f0] shadow-sm hover:shadow-md transition flex flex-col justify-between" data-title="joints movements in the joints">
+                        <div>
+                            <div class="mb-3">
+                                <span class="w-8 h-8 rounded-lg bg-slate-100 font-bold text-[#2c3e50] flex items-center justify-center text-sm">04</span>
+                            </div>
+                            <h3 class="font-bold text-[#2b2d42] text-base mb-2">Joints & Movements in the Joints</h3>
+                            <p class="text-slate-500 text-xs line-clamp-2">Articulations, synovial joints, planes of motion, flexion, extension, abduction, and rotation.</p>
+                        </div>
+                        <div class="mt-5 pt-3 border-t border-slate-100 flex items-center justify-between">
+                            <span class="text-xs text-slate-400"><i class="fa-regular fa-clock mr-1"></i> 45 min read</span>
+                            <a href="unit-04.html" class="inline-flex items-center gap-1.5 text-xs font-semibold text-blue-600 hover:text-blue-800">
+                                Open Unit <i class="fa-solid fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Unit 5 -->
+                    <div class="unit-card bg-white rounded-2xl p-5 border border-[#e2e8f0] shadow-sm hover:shadow-md transition flex flex-col justify-between" data-title="the digestive system structure function">
+                        <div>
+                            <div class="mb-3">
+                                <span class="w-8 h-8 rounded-lg bg-slate-100 font-bold text-[#2c3e50] flex items-center justify-center text-sm">05</span>
+                            </div>
+                            <h3 class="font-bold text-[#2b2d42] text-base mb-2">The Digestive System — Structure & Function</h3>
+                            <p class="text-slate-500 text-xs line-clamp-2">Gastrointestinal tract anatomy, enzymatic breakdown, nutrient absorption, and metabolism.</p>
+                        </div>
+                        <div class="mt-5 pt-3 border-t border-slate-100 flex items-center justify-between">
+                            <span class="text-xs text-slate-400"><i class="fa-regular fa-clock mr-1"></i> 40 min read</span>
+                            <a href="unit-05.html" class="inline-flex items-center gap-1.5 text-xs font-semibold text-blue-600 hover:text-blue-800">
+                                Open Unit <i class="fa-solid fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Unit 6 (Cumulative Review 1) -->
+                    <div class="unit-card bg-[#fffbeb] rounded-2xl p-5 border border-[#fde68a] shadow-sm hover:shadow-md transition flex flex-col justify-between" data-title="cumulative review 1 anatomy physiology">
+                        <div>
+                            <div class="mb-3">
+                                <span class="w-8 h-8 rounded-lg bg-amber-100 font-bold text-[#b45309] flex items-center justify-center text-sm">06</span>
+                            </div>
+                            <h3 class="font-bold text-[#b45309] text-base mb-2">CUMULATIVE REVIEW 1</h3>
+                            <p class="text-amber-800/80 text-xs line-clamp-2">Comprehensive consolidation of Units 1–5: terminology, bones, muscles, joints, and digestion vocabulary.</p>
+                        </div>
+                        <div class="mt-5 pt-3 border-t border-amber-200/60 flex items-center justify-between">
+                            <span class="text-xs text-amber-700/70"><i class="fa-solid fa-pen-to-square mr-1"></i> Interactive Quiz</span>
+                            <a href="unit-06.html" class="inline-flex items-center gap-1.5 text-xs font-bold text-amber-900 hover:text-amber-950">
+                                Take Review <i class="fa-solid fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- MODULE II: Nutrition & Dietetics -->
+            <div class="module-section" data-module="mod-2">
+                <div class="flex items-center gap-3 mb-4 mt-12">
+                    <span class="px-3 py-1 bg-[#2c3e50] text-white text-xs font-bold rounded-lg tracking-wide uppercase">Module II</span>
+                    <h2 class="text-xl sm:text-2xl font-bold text-[#2c3e50]">Nutrition & Dietetics (Units 7–12)</h2>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                    
+                    <!-- Unit 7 -->
+                    <div class="unit-card bg-white rounded-2xl p-5 border border-[#e2e8f0] shadow-sm hover:shadow-md transition flex flex-col justify-between" data-title="diets alternative diets">
+                        <div>
+                            <div class="mb-3">
+                                <span class="w-8 h-8 rounded-lg bg-slate-100 font-bold text-[#2c3e50] flex items-center justify-center text-sm">07</span>
+                            </div>
+                            <h3 class="font-bold text-[#2b2d42] text-base mb-2">Diets & Alternative Diets</h3>
+                            <p class="text-slate-500 text-xs line-clamp-2">Macronutrient distributions, ketogenic, vegan, paleo, Mediterranean, and intermittent fasting.</p>
+                        </div>
+                        <div class="mt-5 pt-3 border-t border-slate-100 flex items-center justify-between">
+                            <span class="text-xs text-slate-400"><i class="fa-regular fa-clock mr-1"></i> 45 min read</span>
+                            <a href="unit-07.html" class="inline-flex items-center gap-1.5 text-xs font-semibold text-blue-600 hover:text-blue-800">
+                                Open Unit <i class="fa-solid fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Unit 8 -->
+                    <div class="unit-card bg-white rounded-2xl p-5 border border-[#e2e8f0] shadow-sm hover:shadow-md transition flex flex-col justify-between" data-title="elimination diets psychodietetics">
+                        <div>
+                            <div class="mb-3">
+                                <span class="w-8 h-8 rounded-lg bg-slate-100 font-bold text-[#2c3e50] flex items-center justify-center text-sm">08</span>
+                            </div>
+                            <h3 class="font-bold text-[#2b2d42] text-base mb-2">Elimination Diets & Psychodietetics</h3>
+                            <p class="text-slate-500 text-xs line-clamp-2">Food intolerances, allergy protocols, eating behaviors, emotional eating, and psychological aspects of dieting.</p>
+                        </div>
+                        <div class="mt-5 pt-3 border-t border-slate-100 flex items-center justify-between">
+                            <span class="text-xs text-slate-400"><i class="fa-regular fa-clock mr-1"></i> 50 min read</span>
+                            <a href="unit-08.html" class="inline-flex items-center gap-1.5 text-xs font-semibold text-blue-600 hover:text-blue-800">
+                                Open Unit <i class="fa-solid fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Unit 9 -->
+                    <div class="unit-card bg-white rounded-2xl p-5 border border-[#e2e8f0] shadow-sm hover:shadow-md transition flex flex-col justify-between" data-title="fitness concepts components assessment">
+                        <div>
+                            <div class="mb-3">
+                                <span class="w-8 h-8 rounded-lg bg-slate-100 font-bold text-[#2c3e50] flex items-center justify-center text-sm">09</span>
+                            </div>
+                            <h3 class="font-bold text-[#2b2d42] text-base mb-2">Fitness — Concepts, Components & Assessment</h3>
+                            <p class="text-slate-500 text-xs line-clamp-2">Health-related vs skill-related fitness, body composition testing, VO2 max, and flexibility assessments.</p>
+                        </div>
+                        <div class="mt-5 pt-3 border-t border-slate-100 flex items-center justify-between">
+                            <span class="text-xs text-slate-400"><i class="fa-regular fa-clock mr-1"></i> 45 min read</span>
+                            <a href="unit-09.html" class="inline-flex items-center gap-1.5 text-xs font-semibold text-blue-600 hover:text-blue-800">
+                                Open Unit <i class="fa-solid fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Unit 10 -->
+                    <div class="unit-card bg-white rounded-2xl p-5 border border-[#e2e8f0] shadow-sm hover:shadow-md transition flex flex-col justify-between" data-title="nutrition in sport">
+                        <div>
+                            <div class="mb-3">
+                                <span class="w-8 h-8 rounded-lg bg-slate-100 font-bold text-[#2c3e50] flex items-center justify-center text-sm">10</span>
+                            </div>
+                            <h3 class="font-bold text-[#2b2d42] text-base mb-2">Nutrition in Sport</h3>
+                            <p class="text-slate-500 text-xs line-clamp-2">Pre-workout, intra-workout, and post-workout fueling strategies, glycogen loading, and hydration.</p>
+                        </div>
+                        <div class="mt-5 pt-3 border-t border-slate-100 flex items-center justify-between">
+                            <span class="text-xs text-slate-400"><i class="fa-regular fa-clock mr-1"></i> 45 min read</span>
+                            <a href="unit-10.html" class="inline-flex items-center gap-1.5 text-xs font-semibold text-blue-600 hover:text-blue-800">
+                                Open Unit <i class="fa-solid fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Unit 11 -->
+                    <div class="unit-card bg-white rounded-2xl p-5 border border-[#e2e8f0] shadow-sm hover:shadow-md transition flex flex-col justify-between" data-title="supplementation in sport">
+                        <div>
+                            <div class="mb-3">
+                                <span class="w-8 h-8 rounded-lg bg-slate-100 font-bold text-[#2c3e50] flex items-center justify-center text-sm">11</span>
+                            </div>
+                            <h3 class="font-bold text-[#2b2d42] text-base mb-2">Supplementation in Sport</h3>
+                            <p class="text-slate-500 text-xs line-clamp-2">Creatine, protein powders, BCAAs, caffeine, beta-alanine, and evidence-based ergogenic aids.</p>
+                        </div>
+                        <div class="mt-5 pt-3 border-t border-slate-100 flex items-center justify-between">
+                            <span class="text-xs text-slate-400"><i class="fa-regular fa-clock mr-1"></i> 40 min read</span>
+                            <a href="unit-11.html" class="inline-flex items-center gap-1.5 text-xs font-semibold text-blue-600 hover:text-blue-800">
+                                Open Unit <i class="fa-solid fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Unit 12 (Cumulative Review 2) -->
+                    <div class="unit-card bg-[#fffbeb] rounded-2xl p-5 border border-[#fde68a] shadow-sm hover:shadow-md transition flex flex-col justify-between" data-title="cumulative review 2 units 7 11 nutrition fitness">
+                        <div>
+                            <div class="mb-3">
+                                <span class="w-8 h-8 rounded-lg bg-amber-100 font-bold text-[#b45309] flex items-center justify-center text-sm">12</span>
+                            </div>
+                            <h3 class="font-bold text-[#b45309] text-base mb-2">CUMULATIVE REVIEW 2 (Units 7–11)</h3>
+                            <p class="text-amber-800/80 text-xs line-clamp-2">Evaluation of nutrition, dietary models, fitness assessment terminology, and sport supplementation.</p>
+                        </div>
+                        <div class="mt-5 pt-3 border-t border-amber-200/60 flex items-center justify-between">
+                            <span class="text-xs text-amber-700/70"><i class="fa-solid fa-pen-to-square mr-1"></i> Interactive Quiz</span>
+                            <a href="unit-12.html" class="inline-flex items-center gap-1.5 text-xs font-bold text-amber-900 hover:text-amber-950">
+                                Take Review <i class="fa-solid fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- MODULE III: Exercise Science & Technique -->
+            <div class="module-section" data-module="mod-3">
+                <div class="flex items-center gap-3 mb-4 mt-12">
+                    <span class="px-3 py-1 bg-[#2c3e50] text-white text-xs font-bold rounded-lg tracking-wide uppercase">Module III</span>
+                    <h2 class="text-xl sm:text-2xl font-bold text-[#2c3e50]">Exercise Science & Technique (Units 13–18)</h2>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                    
+                    <!-- Unit 13 -->
+                    <div class="unit-card bg-white rounded-2xl p-5 border border-[#e2e8f0] shadow-sm hover:shadow-md transition flex flex-col justify-between" data-title="exercise technique lower body squats deadlift hip thrust">
+                        <div>
+                            <div class="mb-3">
+                                <span class="w-8 h-8 rounded-lg bg-slate-100 font-bold text-[#2c3e50] flex items-center justify-center text-sm">13</span>
+                            </div>
+                            <h3 class="font-bold text-[#2b2d42] text-base mb-2">Exercise Technique — Lower Body (Squats, Deadlift, Hip Thrust)</h3>
+                            <p class="text-slate-500 text-xs line-clamp-2">Kinematic analysis, stance width, spinal neutrality, bar path, and joint angles for compound lower body lifts.</p>
+                        </div>
+                        <div class="mt-5 pt-3 border-t border-slate-100 flex items-center justify-between">
+                            <span class="text-xs text-slate-400"><i class="fa-regular fa-clock mr-1"></i> 55 min read</span>
+                            <a href="unit-13.html" class="inline-flex items-center gap-1.5 text-xs font-semibold text-blue-600 hover:text-blue-800">
+                                Open Unit <i class="fa-solid fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Unit 14 -->
+                    <div class="unit-card bg-white rounded-2xl p-5 border border-[#e2e8f0] shadow-sm hover:shadow-md transition flex flex-col justify-between" data-title="exercise technique upper body core push ups crunches planks rowing chin ups">
+                        <div>
+                            <div class="mb-3">
+                                <span class="w-8 h-8 rounded-lg bg-slate-100 font-bold text-[#2c3e50] flex items-center justify-center text-sm">14</span>
+                            </div>
+                            <h3 class="font-bold text-[#2b2d42] text-base mb-2">Exercise Technique — Upper Body & Core (Push-ups, Crunches, Planks, Rowing, Chin-ups)</h3>
+                            <p class="text-slate-500 text-xs line-clamp-2">Scapular retraction, pushing and pulling mechanics, anti-extension core stability, and breathing patterns.</p>
+                        </div>
+                        <div class="mt-5 pt-3 border-t border-slate-100 flex items-center justify-between">
+                            <span class="text-xs text-slate-400"><i class="fa-regular fa-clock mr-1"></i> 55 min read</span>
+                            <a href="unit-14.html" class="inline-flex items-center gap-1.5 text-xs font-semibold text-blue-600 hover:text-blue-800">
+                                Open Unit <i class="fa-solid fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Unit 15 -->
+                    <div class="unit-card bg-white rounded-2xl p-5 border border-[#e2e8f0] shadow-sm hover:shadow-md transition flex flex-col justify-between" data-title="exercise technique plyometrics dynamic movements jumps">
+                        <div>
+                            <div class="mb-3">
+                                <span class="w-8 h-8 rounded-lg bg-slate-100 font-bold text-[#2c3e50] flex items-center justify-center text-sm">15</span>
+                            </div>
+                            <h3 class="font-bold text-[#2b2d42] text-base mb-2">Exercise Technique — Plyometrics & Dynamic Movements (Jumps & More)</h3>
+                            <p class="text-slate-500 text-xs line-clamp-2">Stretch-shortening cycle (SSC), rate of force development, landing mechanics, and plyometric progressions.</p>
+                        </div>
+                        <div class="mt-5 pt-3 border-t border-slate-100 flex items-center justify-between">
+                            <span class="text-xs text-slate-400"><i class="fa-regular fa-clock mr-1"></i> 45 min read</span>
+                            <a href="unit-15.html" class="inline-flex items-center gap-1.5 text-xs font-semibold text-blue-600 hover:text-blue-800">
+                                Open Unit <i class="fa-solid fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Unit 16 -->
+                    <div class="unit-card bg-white rounded-2xl p-5 border border-[#e2e8f0] shadow-sm hover:shadow-md transition flex flex-col justify-between" data-title="the circulatory system structure function">
+                        <div>
+                            <div class="mb-3">
+                                <span class="w-8 h-8 rounded-lg bg-slate-100 font-bold text-[#2c3e50] flex items-center justify-center text-sm">16</span>
+                            </div>
+                            <h3 class="font-bold text-[#2b2d42] text-base mb-2">The Circulatory System — Structure & Function</h3>
+                            <p class="text-slate-500 text-xs line-clamp-2">Heart chambers, cardiac output, blood vessels, systemic and pulmonary circulation during exercise.</p>
+                        </div>
+                        <div class="mt-5 pt-3 border-t border-slate-100 flex items-center justify-between">
+                            <span class="text-xs text-slate-400"><i class="fa-regular fa-clock mr-1"></i> 45 min read</span>
+                            <a href="unit-16.html" class="inline-flex items-center gap-1.5 text-xs font-semibold text-blue-600 hover:text-blue-800">
+                                Open Unit <i class="fa-solid fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Unit 17 -->
+                    <div class="unit-card bg-white rounded-2xl p-5 border border-[#e2e8f0] shadow-sm hover:shadow-md transition flex flex-col justify-between" data-title="the respiratory system structure function">
+                        <div>
+                            <div class="mb-3">
+                                <span class="w-8 h-8 rounded-lg bg-slate-100 font-bold text-[#2c3e50] flex items-center justify-center text-sm">17</span>
+                            </div>
+                            <h3 class="font-bold text-[#2b2d42] text-base mb-2">The Respiratory System — Structure & Function</h3>
+                            <p class="text-slate-500 text-xs line-clamp-2">Pulmonary ventilation, gas exchange in alveoli, oxygen transport, and ventilatory threshold.</p>
+                        </div>
+                        <div class="mt-5 pt-3 border-t border-slate-100 flex items-center justify-between">
+                            <span class="text-xs text-slate-400"><i class="fa-regular fa-clock mr-1"></i> 40 min read</span>
+                            <a href="unit-17.html" class="inline-flex items-center gap-1.5 text-xs font-semibold text-blue-600 hover:text-blue-800">
+                                Open Unit <i class="fa-solid fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Unit 18 (Cumulative Review 3) -->
+                    <div class="unit-card bg-[#fffbeb] rounded-2xl p-5 border border-[#fde68a] shadow-sm hover:shadow-md transition flex flex-col justify-between" data-title="cumulative review 3 units 13 17 technique cardio">
+                        <div>
+                            <div class="mb-3">
+                                <span class="w-8 h-8 rounded-lg bg-amber-100 font-bold text-[#b45309] flex items-center justify-center text-sm">18</span>
+                            </div>
+                            <h3 class="font-bold text-[#b45309] text-base mb-2">CUMULATIVE REVIEW 3 (Units 13–17)</h3>
+                            <p class="text-amber-800/80 text-xs line-clamp-2">Review of lift mechanics, plyometrics, circulatory dynamics, and respiratory adaptations to exercise.</p>
+                        </div>
+                        <div class="mt-5 pt-3 border-t border-amber-200/60 flex items-center justify-between">
+                            <span class="text-xs text-amber-700/70"><i class="fa-solid fa-pen-to-square mr-1"></i> Interactive Quiz</span>
+                            <a href="unit-18.html" class="inline-flex items-center gap-1.5 text-xs font-bold text-amber-900 hover:text-amber-950">
+                                Take Review <i class="fa-solid fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- MODULE IV: Health, Fitness & First Aid -->
+            <div class="module-section" data-module="mod-4">
+                <div class="flex items-center gap-3 mb-4 mt-12">
+                    <span class="px-3 py-1 bg-[#2c3e50] text-white text-xs font-bold rounded-lg tracking-wide uppercase">Module IV</span>
+                    <h2 class="text-xl sm:text-2xl font-bold text-[#2c3e50]">Health, Fitness & First Aid (Units 19–26)</h2>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                    
+                    <!-- Unit 19 -->
+                    <div class="unit-card bg-white rounded-2xl p-5 border border-[#e2e8f0] shadow-sm hover:shadow-md transition flex flex-col justify-between" data-title="chronic diseases causes risk factors">
+                        <div>
+                            <div class="mb-3">
+                                <span class="w-8 h-8 rounded-lg bg-slate-100 font-bold text-[#2c3e50] flex items-center justify-center text-sm">19</span>
+                            </div>
+                            <h3 class="font-bold text-[#2b2d42] text-base mb-2">Chronic Diseases — Causes & Risk Factors</h3>
+                            <p class="text-slate-500 text-xs line-clamp-2">Cardiovascular disease, obesity, type 2 diabetes, metabolic syndrome, and lifestyle risk factors.</p>
+                        </div>
+                        <div class="mt-5 pt-3 border-t border-slate-100 flex items-center justify-between">
+                            <span class="text-xs text-slate-400"><i class="fa-regular fa-clock mr-1"></i> 45 min read</span>
+                            <a href="unit-19.html" class="inline-flex items-center gap-1.5 text-xs font-semibold text-blue-600 hover:text-blue-800">
+                                Open Unit <i class="fa-solid fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Unit 20 -->
+                    <div class="unit-card bg-white rounded-2xl p-5 border border-[#e2e8f0] shadow-sm hover:shadow-md transition flex flex-col justify-between" data-title="chronic diseases management exercise">
+                        <div>
+                            <div class="mb-3">
+                                <span class="w-8 h-8 rounded-lg bg-slate-100 font-bold text-[#2c3e50] flex items-center justify-center text-sm">20</span>
+                            </div>
+                            <h3 class="font-bold text-[#2b2d42] text-base mb-2">Chronic Diseases — Management & Exercise</h3>
+                            <p class="text-slate-500 text-xs line-clamp-2">Prescribing exercise for special populations, contraindications, heart rate monitors, and glucose management.</p>
+                        </div>
+                        <div class="mt-5 pt-3 border-t border-slate-100 flex items-center justify-between">
+                            <span class="text-xs text-slate-400"><i class="fa-regular fa-clock mr-1"></i> 50 min read</span>
+                            <a href="unit-20.html" class="inline-flex items-center gap-1.5 text-xs font-semibold text-blue-600 hover:text-blue-800">
+                                Open Unit <i class="fa-solid fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Unit 21 -->
+                    <div class="unit-card bg-white rounded-2xl p-5 border border-[#e2e8f0] shadow-sm hover:shadow-md transition flex flex-col justify-between" data-title="types of training functional speed endurance">
+                        <div>
+                            <div class="mb-3">
+                                <span class="w-8 h-8 rounded-lg bg-slate-100 font-bold text-[#2c3e50] flex items-center justify-center text-sm">21</span>
+                            </div>
+                            <h3 class="font-bold text-[#2b2d42] text-base mb-2">Types of Training — Functional, Speed & Endurance</h3>
+                            <p class="text-slate-500 text-xs line-clamp-2">Functional movement patterns, HIIT, steady-state cardio, agility drills, and energy system training.</p>
+                        </div>
+                        <div class="mt-5 pt-3 border-t border-slate-100 flex items-center justify-between">
+                            <span class="text-xs text-slate-400"><i class="fa-regular fa-clock mr-1"></i> 45 min read</span>
+                            <a href="unit-21.html" class="inline-flex items-center gap-1.5 text-xs font-semibold text-blue-600 hover:text-blue-800">
+                                Open Unit <i class="fa-solid fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Unit 22 -->
+                    <div class="unit-card bg-white rounded-2xl p-5 border border-[#e2e8f0] shadow-sm hover:shadow-md transition flex flex-col justify-between" data-title="types of training flexibility others">
+                        <div>
+                            <div class="mb-3">
+                                <span class="w-8 h-8 rounded-lg bg-slate-100 font-bold text-[#2c3e50] flex items-center justify-center text-sm">22</span>
+                            </div>
+                            <h3 class="font-bold text-[#2b2d42] text-base mb-2">Types of Training — Flexibility & Others</h3>
+                            <p class="text-slate-500 text-xs line-clamp-2">Static vs dynamic stretching, PNF stretching, myofascial release, and mobility protocols.</p>
+                        </div>
+                        <div class="mt-5 pt-3 border-t border-slate-100 flex items-center justify-between">
+                            <span class="text-xs text-slate-400"><i class="fa-regular fa-clock mr-1"></i> 40 min read</span>
+                            <a href="unit-22.html" class="inline-flex items-center gap-1.5 text-xs font-semibold text-blue-600 hover:text-blue-800">
+                                Open Unit <i class="fa-solid fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Unit 23 -->
+                    <div class="unit-card bg-white rounded-2xl p-5 border border-[#e2e8f0] shadow-sm hover:shadow-md transition flex flex-col justify-between" data-title="training methods">
+                        <div>
+                            <div class="mb-3">
+                                <span class="w-8 h-8 rounded-lg bg-slate-100 font-bold text-[#2c3e50] flex items-center justify-center text-sm">23</span>
+                            </div>
+                            <h3 class="font-bold text-[#2b2d42] text-base mb-2">Training Methods</h3>
+                            <p class="text-slate-500 text-xs line-clamp-2">Linear periodization, undulating periodization, overload principles, supersets, dropsets, and volume management.</p>
+                        </div>
+                        <div class="mt-5 pt-3 border-t border-slate-100 flex items-center justify-between">
+                            <span class="text-xs text-slate-400"><i class="fa-regular fa-clock mr-1"></i> 50 min read</span>
+                            <a href="unit-23.html" class="inline-flex items-center gap-1.5 text-xs font-semibold text-blue-600 hover:text-blue-800">
+                                Open Unit <i class="fa-solid fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Unit 24 (Cumulative Review 4) -->
+                    <div class="unit-card bg-[#fffbeb] rounded-2xl p-5 border border-[#fde68a] shadow-sm hover:shadow-md transition flex flex-col justify-between" data-title="cumulative review 4 units 19 23 diseases training">
+                        <div>
+                            <div class="mb-3">
+                                <span class="w-8 h-8 rounded-lg bg-amber-100 font-bold text-[#b45309] flex items-center justify-center text-sm">24</span>
+                            </div>
+                            <h3 class="font-bold text-[#b45309] text-base mb-2">CUMULATIVE REVIEW 4 (Units 19–23)</h3>
+                            <p class="text-amber-800/80 text-xs line-clamp-2">Review of chronic pathologies, exercise prescription, training types, flexibility, and periodization methods.</p>
+                        </div>
+                        <div class="mt-5 pt-3 border-t border-amber-200/60 flex items-center justify-between">
+                            <span class="text-xs text-amber-700/70"><i class="fa-solid fa-pen-to-square mr-1"></i> Interactive Quiz</span>
+                            <a href="unit-24.html" class="inline-flex items-center gap-1.5 text-xs font-bold text-amber-900 hover:text-amber-950">
+                                Take Review <i class="fa-solid fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Unit 25 -->
+                    <div class="unit-card bg-white rounded-2xl p-5 border border-[#e2e8f0] shadow-sm hover:shadow-md transition flex flex-col justify-between" data-title="first aid emergencies choking cpr unconsciousness">
+                        <div>
+                            <div class="mb-3">
+                                <span class="w-8 h-8 rounded-lg bg-slate-100 font-bold text-[#2c3e50] flex items-center justify-center text-sm">25</span>
+                            </div>
+                            <h3 class="font-bold text-[#2b2d42] text-base mb-2">First Aid — Emergencies (Choking, CPR, Unconsciousness)</h3>
+                            <p class="text-slate-500 text-xs line-clamp-2">Heimlich maneuver, cardiopulmonary resuscitation (CPR), AED operation, and recovery position protocols.</p>
+                        </div>
+                        <div class="mt-5 pt-3 border-t border-slate-100 flex items-center justify-between">
+                            <span class="text-xs text-slate-400"><i class="fa-regular fa-clock mr-1"></i> 50 min read</span>
+                            <a href="unit-25.html" class="inline-flex items-center gap-1.5 text-xs font-semibold text-blue-600 hover:text-blue-800">
+                                Open Unit <i class="fa-solid fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Unit 26 -->
+                    <div class="unit-card bg-white rounded-2xl p-5 border border-[#e2e8f0] shadow-sm hover:shadow-md transition flex flex-col justify-between" data-title="first aid injuries recovery sprains wounds recovery position">
+                        <div>
+                            <div class="mb-3">
+                                <span class="w-8 h-8 rounded-lg bg-slate-100 font-bold text-[#2c3e50] flex items-center justify-center text-sm">26</span>
+                            </div>
+                            <h3 class="font-bold text-[#2b2d42] text-base mb-2">First Aid — Injuries & Recovery (Sprains, Wounds, Recovery Position)</h3>
+                            <p class="text-slate-500 text-xs line-clamp-2">R.I.C.E. protocol for sprains and strains, bleeding control, minor wound care, and gym safety procedures.</p>
+                        </div>
+                        <div class="mt-5 pt-3 border-t border-slate-100 flex items-center justify-between">
+                            <span class="text-xs text-slate-400"><i class="fa-regular fa-clock mr-1"></i> 45 min read</span>
+                            <a href="unit-26.html" class="inline-flex items-center gap-1.5 text-xs font-semibold text-blue-600 hover:text-blue-800">
+                                Open Unit <i class="fa-solid fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Bibliography / References Section -->
+        <section class="mt-20 bg-white rounded-2xl p-8 border border-[#e2e8f0] shadow-sm">
+            <h3 class="text-xl font-bold text-[#2c3e50] mb-4 flex items-center gap-2">
+                <i class="fa-solid fa-book-bookmark text-blue-600"></i> Course Bibliography & Recommended Reading
+            </h3>
+            <p class="text-slate-600 text-sm mb-6">
+                This academic curriculum is built upon peer-reviewed exercise science, kinesiology, and sport nutrition literature. Recommended references for instructors and students include:
+            </p>
+            <ul class="space-y-3 text-sm text-slate-600 list-disc list-inside">
+                <li><strong class="text-[#2b2d42]">ACSM's Guidelines for Exercise Testing and Prescription</strong> (11th ed.). American College of Sports Medicine.</li>
+                <li><strong class="text-[#2b2d42]">NSCA's Essentials of Personal Training</strong> (3rd ed.). National Strength and Conditioning Association.</li>
+                <li><strong class="text-[#2b2d42]">Tortora, G. J., & Derrickson, B.</strong> (2020). <em>Principles of Anatomy and Physiology</em>. John Wiley & Sons.</li>
+                <li><strong class="text-[#2b2d42]">Jeukendrup, A., & Gleeson, M.</strong> (2018). <em>Sport Nutrition: An Introduction to Energy Production and Performance</em>. Human Kinetics.</li>
+            </ul>
+        </section>
+
+    </main>
+
+    <!-- Professional Footer -->
+    <footer class="bg-white border-t border-[#e2e8f0] mt-16 text-slate-600 text-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 flex flex-col md:flex-row justify-between items-center gap-6">
+            <div class="text-center md:text-left">
+                <div class="font-bold text-[#2c3e50] text-base mb-1">English for Personal Trainers</div>
+                <p class="text-xs text-slate-500">Academic E-Coursebook &bull; Instructor: Tetiana Kolisnichenko</p>
+            </div>
+            <div class="flex items-center gap-6 text-xs text-slate-500">
+                <span>CC BY-NC 4.0 Academic License</span>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Client-side Search and Filter Script -->
+    <script>
+        function filterUnits() {
+            const query = document.getElementById('searchInput').value.toLowerCase();
+            const selectedModule = document.getElementById('moduleFilter').value;
+            
+            const modules = document.querySelectorAll('.module-section');
+            
+            modules.forEach(mod => {
+                const modType = mod.getAttribute('data-module');
+                const matchesModule = (selectedModule === 'all' || selectedModule === modType);
+                
+                const cards = mod.querySelectorAll('.unit-card');
+                let visibleCount = 0;
+                
+                cards.forEach(card => {
+                    const titleText = card.getAttribute('data-title') || '';
+                    const matchesQuery = titleText.includes(query);
+                    
+                    if (matchesModule && matchesQuery) {
+                        card.style.display = 'flex';
+                        visibleCount++;
+                    } else {
+                        card.style.display = 'none';
+                    }
+                });
+                
+                if (visibleCount === 0 && matchesModule) {
+                    mod.style.display = 'none';
+                } else {
+                    mod.style.display = 'block';
+                }
+            });
+        }
+    </script>
+
+</body>
+</html>
